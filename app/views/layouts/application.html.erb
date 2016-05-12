@@ -18,7 +18,7 @@
   </button>
   <%= link_to root_path, class: 'navbar-brand' do %>
     <i class="fa fa-users"></i>
-    Dev Match
+    Dev Match 
   <% end %>  
   </div>   
 <div class="collapse navbar-collapse" id="main-nav-collapse">
@@ -30,7 +30,11 @@
 </div>
 </nav>
 
-<div class="container">    
+<div class="container">
+  <% flash.each do |key, value| %>
+   <%= content_tag :div, value, class: "alert alert-#{key}" %>
+  <% end %>
+  
   <%= yield %>
 </div>
 
