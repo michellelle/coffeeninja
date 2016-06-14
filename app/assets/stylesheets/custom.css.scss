@@ -11,6 +11,17 @@ body {
     transition: background-color .5s;
 }
 
+.view {
+    height: 100%;
+}
+
+.view {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -117,3 +128,43 @@ body {
     background-color: #fff;
     color: #000;
 }
+
+.form-signin {
+    max-width: 280px;
+    padding: 15px;
+    margin:100px;
+    margin-top:70px;
+  }
+.panel-default {
+opacity: 0.7;
+/*margin-top:30px;*/
+}
+.input-group-addon
+{
+    background-color: rgb(50, 118, 177);
+    border-color: rgb(40, 94, 142);
+    color: rgb(255, 255, 255);
+}
+
+.form-signup input[type="text"],.form-signup input[type="password"] { border: 1px solid rgb(50, 118, 177); }
+.fullscreen_bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat:repeat;
+  }
+  
+#sign_in a{
+    line-height: 40px;
+    color: #fff;
+    padding: 0 20px 0 20px;
+}
+
+#sign_in a{
+    float: right;
+}
+

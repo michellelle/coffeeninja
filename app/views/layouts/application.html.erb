@@ -18,46 +18,18 @@
  <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <%= link_to root_path, class: 'side-nav' do %>
-          Online Store
+          Company Name
         <% end %>
           <li><%= link_to "About", about_path %></li>
+          <li><%= link_to "Apparel", pages_apparel_path %></li>
+          <li><%= link_to "Electronics", pages_electronics_path %></li>
+          <li><%= link_to "Textiles", pages_textiles_path %></li>
+          <li><%= link_to "Promo", pages_promo_path %></li> 
+          <li><%= link_to "Log In", user_session_path %></li>
+          <li><%= link_to "FAQ's", pages_faqs_path %></li>
           <li><%= link_to "Contact", new_contact_path %></li>
-          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Apparel<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Men's</a></li>
-              <li><a href="#">Women's</a></li>
-              <li><a href="#">Children's</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Electronics<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Music</a></li>
-              <li><a href="#">Computer</a></li>
-              <li><a href="#">Gaming</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Textiles<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Page 1-3</a></li>
-              <li><a href="#">Page 1-3</a></li>
-              <li><a href="#">Page 1-3</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Promo<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Page 1-1</a></li>
-              <li><a href="#">Page 1-2</a></li>
-              <li><a href="#">Page 1-3</a></li>
-            </ul>
-          </li>
-          <!-- /.sign up / login -->
-          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-check"></span> Login<span class="caret"></a>
-            <ul class="dropdown-menu">
-              <li><a href="#"><span class="glyphicon glyphicon-user">Sign Up</a></li>
-            </ul>
-          </li>
         </div>
-        </div>
+        
         <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i>Company Name</span>
 
 <script>
@@ -78,6 +50,8 @@
   <% flash.each do |key, value| %>
    <%= content_tag :div, value, class: "alert alert-#{key}" %>
   <% end %>
+  
+    <p class="notice"><%= notice %></p>
   
   <%= yield %>
 </div>

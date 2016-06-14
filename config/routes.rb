@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  devise_for :users
+  get 'cart/index'
+
+  resources :products
+  get 'pages/faqs' => 'pages#faqs'
+
+  get 'pages/apparel' => 'pages#apparel'
+
+  get 'pages/electronics' => 'pages#electronics'
+
+  get 'pages/textiles' => 'pages#textiles'
+
+  get 'pages/promo' => 'pages#promo'
+
   resources :contacts 
   get '/about' => 'pages#about'
   root 'pages#home'

@@ -6,7 +6,9 @@ group :production do
   gem 'rails_12factor' 
  end
 
-# Usefont awesome libary for icons 
+#Use devise for shopping cart.
+gem 'devise'
+#Use font awesome libary for icons 
 gem 'font-awesome-sass', '4.6.2'
 #Use bootstrap library for stylesheets
 gem 'bootstrap-sass', '3.3.1'
