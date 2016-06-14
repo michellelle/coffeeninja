@@ -5,30 +5,74 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora:700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-<div class="container">
-<div class="navbar-header">
-  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
-    <span class="sr-only">Toggle navigation</span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-  </button>
-  <%= link_to root_path, class: 'navbar-brand' do %>
-    <i class="fa fa-users"></i>
-    Dev Match 
-  <% end %>  
-  </div>   
-<div class="collapse navbar-collapse" id="main-nav-collapse">
-  <ul class="nav navbar-nav navbar-right">
-    <li><%= link_to "About", about_path %></li>
-    <li><%= link_to "Contact Us", new_contact_path %></li>
-  </ul>
-</div><!-- /.navbar-collapse -->
-</div>
-</nav>
+ <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <%= link_to root_path, class: 'side-nav' do %>
+          Online Store
+        <% end %>
+          <li><%= link_to "About", about_path %></li>
+          <li><%= link_to "Contact", new_contact_path %></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Apparel<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Men's</a></li>
+              <li><a href="#">Women's</a></li>
+              <li><a href="#">Children's</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Electronics<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Music</a></li>
+              <li><a href="#">Computer</a></li>
+              <li><a href="#">Gaming</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Textiles<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Page 1-3</a></li>
+              <li><a href="#">Page 1-3</a></li>
+              <li><a href="#">Page 1-3</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Promo<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Page 1-1</a></li>
+              <li><a href="#">Page 1-2</a></li>
+              <li><a href="#">Page 1-3</a></li>
+            </ul>
+          </li>
+          <!-- /.sign up / login -->
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-check"></span> Login<span class="caret"></a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><span class="glyphicon glyphicon-user">Sign Up</a></li>
+            </ul>
+          </li>
+        </div>
+        </div>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i>Company Name</span>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+    
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        document.body.style.backgroundColor = "white";
+    }
+</script>
 
 <div class="container">
   <% flash.each do |key, value| %>
